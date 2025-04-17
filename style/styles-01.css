@@ -1,0 +1,40 @@
+body {
+    overflow: hidden;
+}
+
+.nav {
+    background-color: #dd4e4e;
+}
+
+.con {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+form {
+    height: 150px;
+}
+
+h5 {
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
