@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="assets/images/icon.ico">
     <title>Customers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Customers</a>
+                        <a class="nav-link active" aria-current="page" href="customers.html">Customers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Items</a>
@@ -54,46 +55,24 @@
 
                 <div class="card m-4 p-2" style="width: 25rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Students</h5>
+                        <h5 class="card-title">Customers</h5>
 
                         <form>
                             <div class="mb-3">
-                                <label for="first-name-input" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="first-name-input" placeholder="Enter First Name">
+                                <label for="first-name-input" class="form-label">Customer ID</label>
+                                <input type="text" class="form-control" id="first-name-input" placeholder="">
                             </div>
                             <div class="mb-3">
-                                <label for="last-name-input" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="last-name-input" placeholder="Enter Last Name">
+                                <label for="last-name-input" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="last-name-input" placeholder="">
                             </div>
-
-                            <div class="mb-3">
-                                <label for="program-selector" class="form-label">Program</label>
-                                <select class="form-select" aria-label="Default select example" id="program-selector">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">GDSE</option>
-                                    <option value="2">DEP</option>
-                                    <option value="3">CMJD</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="program" id="after-al">
-                                    <label class="form-check-label" for="after-al">
-                                        After A/L
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="program" id="after-ol" checked>
-                                    <label class="form-check-label" for="after-ol">
-                                        After O/L
-                                    </label>
-                                </div>
-                            </div>
-
                             <div class="mb-3">
                                 <label for="address" class="form-label">Address</label>
                                 <textarea class="form-control" id="address" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Save</button>
@@ -115,11 +94,10 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">First Name</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Program</th>
-                                <th scope="col">Qualification</th>
+                                <th scope="col">Customer ID</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Address</th>
+                                <th scope="col">Email</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -128,7 +106,6 @@
                                 <td>Kalupahana</td>
                                 <td>GDSE</td>
                                 <td>A/L</td>
-                                <td>Panadura</td>
                             </tr>
                             </tbody>
                         </table>
