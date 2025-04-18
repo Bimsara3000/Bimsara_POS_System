@@ -2,10 +2,6 @@ body {
     overflow: hidden;
 }
 
-.nav {
-    background-color: #dd4e4e;
-}
-
 .con {
     position: relative;
     height: 100vh;
@@ -37,4 +33,20 @@ button {
     right: 0;
     left: 0;
     margin: auto;
+}
+
+.c1 {
+    padding-right: 10vw;
+}
+
+@media all and (min-width: 800px){
+    .login {
+        width: 30vw;
+    }
+}
+
+@media all and (min-width: 600px){
+    .login {
+        width: 20vw;
+    }
 }

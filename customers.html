@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/styles-02.css">
+
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+                Bimsara POS System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Enter Customer Name" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+
+                <div class="card m-4 p-2" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Students</h5>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="first-name-input" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first-name-input" placeholder="Enter First Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="last-name-input" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last-name-input" placeholder="Enter Last Name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="program-selector" class="form-label">Program</label>
+                                <select class="form-select" aria-label="Default select example" id="program-selector">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">GDSE</option>
+                                    <option value="2">DEP</option>
+                                    <option value="3">CMJD</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="program" id="after-al">
+                                    <label class="form-check-label" for="after-al">
+                                        After A/L
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="program" id="after-ol" checked>
+                                    <label class="form-check-label" for="after-ol">
+                                        After O/L
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea class="form-control" id="address" rows="3"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-warning">Update</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                            <button type="reset" class="btn btn-light">Reset</button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                <div class="card m-4" style="width: 35rem;">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Program</th>
+                                <th scope="col">Qualification</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Bimsara</td>
+                                <td>Kalupahana</td>
+                                <td>GDSE</td>
+                                <td>A/L</td>
+                                <td>Panadura</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
