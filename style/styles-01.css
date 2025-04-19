@@ -2,27 +2,6 @@ body {
     overflow: hidden;
 }
 
-.con {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-.login {
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-
-form {
-    height: 150px;
-}
-
 h5 {
     text-align: center;
 }
@@ -33,20 +12,4 @@ button {
     right: 0;
     left: 0;
     margin: auto;
-}
-
-.c1 {
-    padding-right: 10vw;
-}
-
-@media all and (min-width: 800px){
-    .login {
-        width: 30vw;
-    }
-}
-
-@media all and (min-width: 600px){
-    .login {
-        width: 20vw;
-    }
 }
