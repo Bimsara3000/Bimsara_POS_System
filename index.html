@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/ico" href="assets/images/icon.ico">
-    <title>Login</title>
+    <title>Bimsara POS System</title>
 
     <meta name="keywords" content="html,css,javascript,pos,bootstrap">
     <meta name="description" content="Welcome to Bimsara POS System">
@@ -17,13 +17,44 @@
 <body>
 
 <header>
-
-    <nav class="navbar bg-body-tertiary m-0 p-0">
-        <div class="container-fluid nav p-1">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
                 Bimsara POS System
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="customer-link">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="item-link">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="order-link">Orders</a>
+                    </li>
+                </ul>
+                <div id="customer-search">
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Enter Customer Name" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+                <div id="item-search">
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -31,39 +62,430 @@
 
 <main>
 
-    <div class="container con">
+    <section id="login">
 
-        <div class="row login">
+        <div class="container con">
 
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row login">
 
-                <div class="card m-4 p-2 c1 mx-auto" style="width: 25rem; height: 15rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Login</h5>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="first-name-input" placeholder="Username">
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
+                    <div class="card m-4 p-2 c1 mx-auto" style="width: 25rem; height: 15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Login</h5>
 
-                            <button type="submit" class="btn btn-primary">Enter</button>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="first-name-input" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
 
-                        </form>
+                                <a id="enter">
 
+                                    <button id="enter-button" type="button" class="btn btn-primary">Enter</button>
+
+                                </a>
+
+                            </form>
+
+                        </div>
                     </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
+    <section id="customer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-4">
+
+                    <div class="card m-4 p-2" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Customers</h5>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="customer-id-input" class="form-label">Customer ID</label>
+                                    <input type="text" class="form-control" id="customer-id-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="name-input" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea class="form-control" id="address" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email-input" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-warning">Update</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="reset" class="btn btn-light">Reset</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                    <div class="card m-4" style="width: 35rem;">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Customer ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Email</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="item">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-4">
+
+                    <div class="card m-4 p-2" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Items</h5>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="item-id-input" class="form-label">Item ID</label>
+                                    <input type="text" class="form-control" id="item-id-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item_name-input" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="item_name-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="qty-input" class="form-label">Quantity</label>
+                                    <input type="text" class="form-control" id="qty-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price-input" class="form-label">Price</label>
+                                    <input type="text" class="form-control" id="price-input" placeholder="">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-warning">Update</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="reset" class="btn btn-light">Reset</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                    <div class="card m-4" style="width: 35rem;">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Item ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="order">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-4">
+
+                    <div class="card m-4 p-2" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Orders</h5>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="order-id-input" class="form-label">Order ID</label>
+                                    <input type="text" class="form-control" id="order-id-input" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customer-input" class="form-label">Customer</label>
+                                    <input type="text" class="form-control" id="customer-input" placeholder="">
+                                    <div class="dropdown m-2 drop">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Choose customer
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                        <a  id="history">
+                                            <button type="button" class="btn btn-success">Order History</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item-input" class="form-label">Item</label>
+                                    <input type="text" class="form-control" id="item-input" placeholder="">
+                                    <div class="dropdown m-2 drop">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Choose item
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="quantity-input" class="form-label">Quantity</label>
+                                    <input type="text" class="form-control" id="quantity-input" placeholder="">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-warning">Update</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="reset" class="btn btn-light">Reset</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                    <div class="card m-4" style="width: 35rem;">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Item ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form>
+                    <div class="input-group mb-3 m-4 p-4">
+                        <input type="text" class="form-control" placeholder="Order's total" aria-label="Order's total" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Place order</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="order_history">
+
+        <div class="container con">
+
+            <div class="row">
+
+                <div id="item-table" class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                    <div class="card m-4" style="width: 35rem;">
+                        <div class="card-body">
+                            <table class="table caption-top">
+                                <caption>Items</caption>
+                                <thead>
+                                <tr>
+                                    <th scope="col">Item ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+                    <div class="card m-4" style="width: 35rem;">
+                        <div class="card-body">
+                            <table class="table caption-top">
+                                <caption>Orders</caption>
+                                <thead>
+                                <tr>
+                                    <th scope="col">Order ID</th>
+                                    <th scope="col">Customer</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    $("#customer-search").css("display", "none");
+    $("#customer").css("display", "none");
+    $("#item").css("display", "none");
+    $("#item-search").css("display", "none");
+    $("#order").css("display", "none");
+    $("#order_history").css("display", "none");
+
+    $("#enter").on('click', function () {
+        $("#customer-search").css("display", "block");
+        $("#customer").css("display", "block");
+        $("#item").css("display", "none");
+        $("#item-search").css("display", "none");
+        $("#order").css("display", "none");
+        $("#order_history").css("display", "none");
+        $("#login").css("display", "none");
+    })
+
+    $("#customer-link").on('click', function () {
+        $("#customer-search").css("display", "block");
+        $("#customer").css("display", "block");
+        $("#item").css("display", "none");
+        $("#item-search").css("display", "none");
+        $("#order").css("display", "none");
+        $("#order_history").css("display", "none");
+        $("#login").css("display", "none");
+    })
+
+    $("#item-link").on('click', function () {
+        $("#customer-search").css("display", "none");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "block");
+        $("#item-search").css("display", "block");
+        $("#order").css("display", "none");
+        $("#order_history").css("display", "none");
+        $("#login").css("display", "none");
+    })
+
+    $("#order-link").on('click', function () {
+        $("#customer-search").css("display", "none");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "none");
+        $("#item-search").css("display", "none");
+        $("#order").css("display", "block");
+        $("#order_history").css("display", "none");
+        $("#login").css("display", "none");
+    })
+
+    $("#history").on('click', function () {
+        $("#customer-search").css("display", "none");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "none");
+        $("#item-search").css("display", "none");
+        $("#order").css("display", "none");
+        $("#order_history").css("display", "block");
+        $("#login").css("display", "none");
+        $("#item-table").css("display", "none");
+    })
+
+</script>
+
 </body>
 </html>

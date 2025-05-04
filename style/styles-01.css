@@ -1,12 +1,16 @@
 body {
     overflow: hidden;
+    background-image: url("../assets/images/therapy.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h5 {
     text-align: center;
 }
 
-button {
+#enter-button {
     width: 100px;
     position: absolute;
     right: 0;
