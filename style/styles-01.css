@@ -17,3 +17,12 @@ h5 {
     left: 0;
     margin: auto;
 }
+
+#navbar {
+    width: 55vw;
+
+    & li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

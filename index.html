@@ -17,42 +17,45 @@
 <body>
 
 <header>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
                 Bimsara POS System
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="customer-link">Customers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="item-link">Items</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="order-link">Orders</a>
-                    </li>
-                </ul>
-                <div id="customer-search">
+            <div id="navbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-links" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="customer-link">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="item-link">Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="order-link">Orders</a>
+                        </li>
+                    </ul>
+                    <div id="customer-search">
 
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Enter Customer Name" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Enter Customer Name" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
 
-                </div>
-                <div id="item-search">
+                    </div>
+                    <div id="item-search">
 
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -433,6 +436,7 @@
     $("#item-search").css("display", "none");
     $("#order").css("display", "none");
     $("#order_history").css("display", "none");
+    $("#navbar").css("display", "none");
 
     $("#enter").on('click', function () {
         $("#customer-search").css("display", "block");
@@ -442,6 +446,7 @@
         $("#order").css("display", "none");
         $("#order_history").css("display", "none");
         $("#login").css("display", "none");
+        $("#navbar").css("display", "block");
     })
 
     $("#customer-link").on('click', function () {
@@ -452,6 +457,7 @@
         $("#order").css("display", "none");
         $("#order_history").css("display", "none");
         $("#login").css("display", "none");
+        $("#navbar").css("display", "block");
     })
 
     $("#item-link").on('click', function () {
@@ -462,6 +468,7 @@
         $("#order").css("display", "none");
         $("#order_history").css("display", "none");
         $("#login").css("display", "none");
+        $("#navbar").css("display", "block");
     })
 
     $("#order-link").on('click', function () {
@@ -472,6 +479,7 @@
         $("#order").css("display", "block");
         $("#order_history").css("display", "none");
         $("#login").css("display", "none");
+        $("#navbar").css("display", "block");
     })
 
     $("#history").on('click', function () {
@@ -483,6 +491,7 @@
         $("#order_history").css("display", "block");
         $("#login").css("display", "none");
         $("#item-table").css("display", "none");
+        $("#navbar").css("display", "block");
     })
 
 </script>
