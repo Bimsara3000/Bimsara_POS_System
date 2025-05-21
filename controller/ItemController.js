@@ -1,5 +1,6 @@
 import {items_db} from "../db/DB.js";
 import ItemModel from "../model/ItemModel.js";
+import {loadItemMenu} from "./OrderController.js";
 
 function loadItems() {
     $('#item-tbody').empty();
@@ -76,6 +77,8 @@ $('#item_save').on('click', function(){
             icon: "success",
             draggable: true
         });
+
+        loadItemMenu();
     }
 });
 

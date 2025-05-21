@@ -255,50 +255,46 @@
                             <h5 class="card-title">Orders</h5>
 
                             <form>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="order-id-input" class="form-label">Order ID</label>
                                     <input type="text" class="form-control" id="order-id-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="customer-input" class="form-label">Customer</label>
                                     <input type="text" class="form-control" id="customer-input" placeholder="">
+                                    <small>Error Message</small>
                                     <div class="dropdown m-2 drop">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Choose customer
                                         </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
+                                        <ul id="customer_menu" class="dropdown-menu"></ul>
                                         <a  id="history">
                                             <button type="button" class="btn btn-success">Order History</button>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="item-input" class="form-label">Item</label>
                                     <input type="text" class="form-control" id="item-input" placeholder="">
+                                    <small>Error Message</small>
                                     <div class="dropdown m-2 drop">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Choose item
                                         </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
+                                        <ul id="item_menu" class="dropdown-menu"></ul>
                                     </div>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="quantity-input" class="form-label">Quantity</label>
                                     <input type="text" class="form-control" id="quantity-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <button type="button" class="btn btn-warning">Update</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                <button type="reset" class="btn btn-light">Reset</button>
+                                <button id="order_save" type="button" class="btn btn-primary">Save</button>
+                                <button id="order_update" type="button" class="btn btn-warning">Update</button>
+                                <button id="order_delete" type="button" class="btn btn-danger">Delete</button>
+                                <button id="order_reset" type="reset" class="btn btn-light">Reset</button>
 
                             </form>
 
@@ -320,14 +316,7 @@
                                     <th scope="col">Price</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
+                                <tbody id="cart_tbody"></tbody>
                             </table>
                         </div>
                     </div>
@@ -421,6 +410,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!--<script type="module" src="controller/LoginController.js"></script>-->
+<script type="module" src="controller/OrderController.js"></script>
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/ItemController.js"></script>
 

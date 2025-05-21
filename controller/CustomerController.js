@@ -1,5 +1,6 @@
 import {customers_db} from "../db/DB.js";
 import CustomerModel from "../model/CustomerModel.js";
+import {loadCustomerMenu} from "./OrderController.js";
 
 function loadCustomers() {
     $('#customer-tbody').empty();
@@ -74,6 +75,8 @@ $('#customer_save').on('click', function(){
             icon: "success",
             draggable: true
         });
+
+        loadCustomerMenu();
     }
 });
 
