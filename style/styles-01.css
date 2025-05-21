@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: url("../assets/images/wallpaper.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,4 +25,33 @@ h5 {
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+small {
+    /*visibility: hidden;*/
+}
+
+.form_control.success input {
+    border-color: green;
+}
+
+.form_control.success textarea {
+    border-color: green;
+}
+
+.form_control.error input {
+    border-color: red;
+}
+
+.form_control.error textarea {
+    border-color: red;
+}
+
+.form_control.success small {
+    visibility: hidden;
+}
+
+.form_control.error small {
+    color: red;
+    visibility: visible;
 }
