@@ -20,9 +20,7 @@ function loadCustomers() {
     })
 }
 
-// save
 $('#customer_save').on('click', function(){
-    let form = $('#form');
     let id = $('#customer-id-input').val().trim();
     let name = $('#name-input').val().trim();
     let email = $('#email-input').val().trim();
@@ -135,7 +133,7 @@ $('#customer_delete').on('click', function(){
                 clear();
                 Swal.fire({
                     title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    text: "The customer has been deleted.",
                     icon: "success"
                 });
             }
@@ -248,5 +246,6 @@ $('#customer_search').on('click', function(e){
             icon: 'error',
             confirmButtonText: 'Ok'
         })
+        $('#customer_name').val('')
     }
 });

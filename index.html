@@ -41,15 +41,15 @@
 
                         <form class="d-flex" role="search">
                             <input id="customer_name" class="form-control me-2" type="search" placeholder="Enter Customer Name" aria-label="Search">
-                            <button id="customer_search" class="btn btn-outline-success" type="submit">Search</button>
+                            <button id="customer_search" class="btn btn-outline-success" type="button">Search</button>
                         </form>
 
                     </div>
                     <div id="item-search">
 
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <input id="item_name" class="form-control me-2" type="search" placeholder="Enter Item Name" aria-label="Search">
+                            <button id="item_search" class="btn btn-outline-success" type="button">Search</button>
                         </form>
 
                     </div>
@@ -184,27 +184,31 @@
                             <h5 class="card-title">Items</h5>
 
                             <form>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="item-id-input" class="form-label">Item ID</label>
                                     <input type="text" class="form-control" id="item-id-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="item_name-input" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="item_name-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="qty-input" class="form-label">Quantity</label>
                                     <input type="text" class="form-control" id="qty-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 form_control">
                                     <label for="price-input" class="form-label">Price</label>
                                     <input type="text" class="form-control" id="price-input" placeholder="">
+                                    <small>Error Message</small>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Save</button>
-                                <button type="button" class="btn btn-warning">Update</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                <button type="reset" class="btn btn-light">Reset</button>
+                                <button id="item_save" type="button" class="btn btn-primary">Save</button>
+                                <button id="item_update" type="button" class="btn btn-warning">Update</button>
+                                <button id="item_delete" type="button" class="btn btn-danger">Delete</button>
+                                <button id="item_reset" type="reset" class="btn btn-light">Reset</button>
 
                             </form>
 
@@ -226,14 +230,7 @@
                                     <th scope="col">Price</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
+                                <tbody id="item-tbody"></tbody>
                             </table>
                         </div>
                     </div>
@@ -425,6 +422,7 @@
 
 <!--<script type="module" src="controller/LoginController.js"></script>-->
 <script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/ItemController.js"></script>
 
 <script>
 

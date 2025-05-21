@@ -28,7 +28,7 @@ h5 {
 }
 
 small {
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 
 .form_control.success input {
