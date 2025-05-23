@@ -77,9 +77,11 @@
                             <form>
                                 <div class="mb-3">
                                     <input type="text" class="form-control" id="first-name-input" placeholder="Username">
+                                    <small>Error Message</small>
                                 </div>
                                 <div class="mb-3">
                                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <small>Error Message</small>
                                 </div>
 
                                 <a id="enter">
@@ -262,7 +264,7 @@
                                 </div>
                                 <div class="mb-3 form_control">
                                     <label for="customer-input" class="form-label">Customer</label>
-                                    <input type="text" class="form-control" id="customer-input" placeholder="">
+                                    <input type="text" class="form-control" id="customer-input" placeholder="" readonly>
                                     <small>Error Message</small>
                                     <div class="dropdown m-2 drop">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -270,16 +272,16 @@
                                         </button>
                                         <ul id="customer_menu" class="dropdown-menu"></ul>
                                         <a  id="history">
-                                            <button type="button" class="btn btn-success">Order History</button>
+                                            <button id="btn_history" type="button" class="btn btn-success">Order History</button>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="mb-3 form_control">
                                     <label for="item-input" class="form-label">Item</label>
-                                    <input type="text" class="form-control" id="item-input" placeholder="">
+                                    <input type="text" class="form-control" id="item-input" placeholder="" readonly>
                                     <small>Error Message</small>
                                     <div class="dropdown m-2 drop">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button id="btn_item" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Choose item
                                         </button>
                                         <ul id="item_menu" class="dropdown-menu"></ul>
@@ -325,7 +327,7 @@
 
                 <form>
                     <div class="input-group mb-3 m-4 p-4">
-                        <input type="text" class="form-control" placeholder="Order's total" aria-label="Order's total" aria-describedby="button-addon2">
+                        <input id="tot" type="text" class="form-control" placeholder="Order's total" aria-label="Order's total" aria-describedby="button-addon2" readonly>
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Place order</button>
                     </div>
                 </form>
@@ -355,14 +357,7 @@
                                     <th scope="col">Price</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                </tbody>
+                                <tbody id="cart_history_tbody"></tbody>
                             </table>
                         </div>
                     </div>
@@ -383,14 +378,7 @@
                                     <th scope="col">Total</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                </tbody>
+                                <tbody id="order_tbody"></tbody>
                             </table>
                         </div>
                     </div>

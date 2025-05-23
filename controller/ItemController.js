@@ -2,7 +2,7 @@ import {items_db} from "../db/DB.js";
 import ItemModel from "../model/ItemModel.js";
 import {loadItemMenu} from "./OrderController.js";
 
-function loadItems() {
+export function loadItems() {
     $('#item-tbody').empty();
     items_db.map((item) => {
         let id = item.id;
